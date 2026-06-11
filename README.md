@@ -51,7 +51,7 @@ python client.py stats
 cd tests
 
 # Chạy cả 3 experiments
-python -m tests.experiments all
+python experiments.py all
 
 # Chạy từng cái
 python experiments.py exp1   # Scalability
