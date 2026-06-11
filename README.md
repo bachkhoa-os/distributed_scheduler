@@ -48,15 +48,13 @@ python client.py stats
 ## Chạy Experiments
 
 ```bash
-cd tests
-
 # Chạy cả 3 experiments
-python experiments.py all
+python -m tests.experiments all
 
 # Chạy từng cái
-python experiments.py exp1   # Scalability
-python experiments.py exp2   # Scheduling policies
-python experiments.py exp3   # Failure recovery
+python -m tests.experiments exp1   # Scalability
+python -m tests.experiments exp2   # Scheduling policies
+python -m tests.experiments exp3   # Failure recovery
 ```
 
 ## Scheduling Policies
