@@ -65,7 +65,7 @@ def wait_completion(master: Master, task_ids: list, timeout=180) -> float:
             )
         if done == len(task_ids):
             return round(time.time() - t0, 3)
-        time.sleep(0.5)
+        time.sleep(0.05)
     return round(time.time() - t0, 3)
 
 
@@ -94,7 +94,7 @@ def exp1_scalability():
 
         time.sleep(0.5)   # chờ workers register
 
-        task_ids = submit_tasks(master, 20, "prime_count", 200_000)  # 20 tasks mỗi run
+        task_ids = submit_tasks(master, 100, "prime_count", 5_000_000)  # 20 tasks mỗi run
         elapsed  = wait_completion(master, task_ids)
         throughput = round(len(task_ids) / elapsed, 2)
 
